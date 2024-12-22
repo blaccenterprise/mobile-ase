@@ -1,1 +1,113 @@
+  <!DOCTYPE html>
+<html>
+<head>
+      <title> Missions </title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {
+		    background-image: url('./Circle_Background.jpg');
+
+		}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+		<br>
+	<a href="../Archetype_Chamber.html"><button  class="previous round" style="width:50px; height:50px; font-size: 24px;">&#8249;
+</button></a>
+<h1 style="color: green;">Mission's List</h1>
+
+
+<ul id="myUL">
+  <li><a href="./Complete_A_Task_From_A_Level_1_Archetype.html">Complete A Task From A Level 1 Archetype - Lv.5</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_1_BLACC_Connect_Member.html">Complete A Task From A Level 1 B.L.A.C.C. Connect Member - Lv.5</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_2_Archetype.html">Complete A Task From A Level 2 Archetype - Lv.5</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_2_BLACC_Connect_Member.html">Complete A Task From A Level 2 B.L.A.C.C. Connect Member - Lv.7</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_3_Archetype.html">Complete A Task From A Level 3 Archetype - Lv.5</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_3_BLACC_Connect_Member.html">Complete A Task From A Level 3 B.L.A.C.C. Connect Member - Lv.10</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_4_Archetype.html">Complete A Task From A Level 4 Archetype - Lv.5</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_5_Archetype.html">Complete A Task From A Level 5 Archetype - Lv.5</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_6_Archetype.html">Complete A Task From A Level 6 Archetype - Lv.10</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_7_Archetype.html">Complete A Task From A Level 7 Archetype - Lv.10</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_8_Archetype.html">Complete A Task From A Level 8 Archetype - Lv.10</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_9_Archetype.html">Complete A Task From A Level 9 Archetype - Lv.10</a></li>
+  <li><a href="./Complete_A_Task_From_A_Level_10_Archetype.html">Complete A Task From A Level 10 Archetype - Lv.10</a></li>
+  <li><a href="./Enter_The_Student_Government_Position.html">Enter The Student Government Position - Lv.11</a></li>
+  <li><a href="./Get_The_Badge_Number_Of_5.html">Get The Badge Number Of 5 - Lv.3</a></li>
+  <li><a href="./Get_The_Licence_Of_5s_Car.html">Get The Licence Of 5's Car - Lv.5</a></li>
+  <li><a href="./Select_A_Private_Self-Defense_Weapon.html">Select A Private Self-Defense Weapon - Lv.13</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
